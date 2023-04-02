@@ -130,9 +130,9 @@ _sys_timezone() {
 	fi
 
 	echo
-	timedatectl set-timezone Asia/Shanghai
+	timedatectl set-timezone America/New_York
 	timedatectl set-ntp true
-	echo "已将你的主机设置为Asia/Shanghai时区并通过systemd-timesyncd自动同步时间。"
+	echo "已将你的主机设置为America/New_York时区并通过systemd-timesyncd自动同步时间。"
 	echo
 
 	if [[ $IS_OPENVZ ]]; then
@@ -783,7 +783,7 @@ install_v2ray() {
 		# $cmd install -y lrzsz git zip unzip curl wget qrencode libcap iptables-services
 		$cmd install -y lrzsz git zip unzip curl wget qrencode libcap
 	fi
-	ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+	ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 	[ -d /etc/v2ray ] && rm -rf /etc/v2ray
 	# date -s "$(curl -sI g.cn | grep Date | cut -d' ' -f3-6)Z"
 	_sys_timezone
@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/233boy/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
+		git clone https://github.com/jappre/myray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
 		popd
 
 	fi
