@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/jappre/myray -b main /etc/v2ray/233boy/v2ray --depth=1
+		git clone https://github.com/jappre/myray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
 		popd
 
 	fi
@@ -991,7 +991,7 @@ _gitbranch=$2
 case $args in
 online)
 	#hello world
-	[[ -z $_gitbranch ]] && _gitbranch="master"
+	[[ -z $_gitbranch ]] && _gitbranch="main"
 	;;
 local)
 	local_install=true
