@@ -2608,17 +2608,11 @@ menu() {
 	clear
 	while :; do
 		echo
-		echo "........... V2Ray 管理脚本 $_version by 233v2.com .........."
+		echo "........... V2Ray 管理脚本 $_version .........."
 		echo
 		echo -e "## V2Ray 版本: $cyan$v2ray_ver$none  /  V2Ray 状态: $v2ray_status ##"
 		echo
-		echo "帮助说明: https://233v2.com/post/1/"
-		echo
-		echo "反馈问题: https://github.com/233boy/v2ray/issues"
-		echo
-		echo "TG 频道: https://t.me/tg2333"
-		echo
-		echo "捐赠脚本作者: https://233v2.com/donate/"
+		echo "帮助说明: 1"
 		echo
 		echo -e "$yellow  1. $none查看 V2Ray 配置"
 		echo
